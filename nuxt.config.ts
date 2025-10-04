@@ -4,6 +4,15 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: false },
 
+  app: {
+    head: {
+      meta: [
+        // Add this line
+        { name: "theme-color", content: "#000000" },
+      ],
+    },
+  },
+
   vite: {
     plugins: [tailwindcss()],
   },
