@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     head: {
       meta: [
         // Add this line
-        { name: "theme-color", content: "#000000" },
+        { name: "theme-color", content: "#ffffff" },
       ],
     },
   },
