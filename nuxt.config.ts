@@ -25,13 +25,6 @@ export default defineNuxtConfig({
 
   css: ["@/assets/css/main.css"],
 
-  colorMode: {
-    preference: "light", // always start in light mode
-    fallback: "light", // default if system preference can't be detected
-    classSuffix: "", // optional: avoid adding -dark suffix classes
-    disableSwitch: true, // disable the toggle UI (if you have one)
-  },
-
   modules: [
     "@vite-pwa/nuxt",
     "@nuxt/ui",
