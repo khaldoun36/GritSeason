@@ -12,6 +12,7 @@
           twMerge(
             'flex aspect-[3/4] flex-col items-center justify-center gap-0.5 rounded-lg text-center outline-[1.75px] outline-neutral-950/10',
             isSameDay(selectedDate, day) && 'bg-white/8 outline-white/10',
+            isToday(day) && 'outline-white/20',
           )
         "
         @click="handleDateChange(day)"
@@ -48,6 +49,7 @@ import {
   eachDayOfInterval,
   format,
   isSameDay,
+  isToday,
 } from "date-fns";
 
 import { twMerge } from "tailwind-merge";
@@ -57,7 +59,7 @@ const foodDiary = useFoodDiaryStore();
 
 const currentDate = new Date();
 
-const selectedDate = ref(new Date());
+const selectedDate = ref(foodDiary.selectedDate);
 
 // Get the start of the week (Monday)
 const weekStart = startOfWeek(currentDate, { weekStartsOn: 1 });
