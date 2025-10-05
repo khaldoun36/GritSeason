@@ -1,6 +1,7 @@
 <template>
   <nav
-    class="fixed right-0 bottom-0 left-0 flex items-center justify-between border-t border-neutral-950/8 px-4 py-1 backdrop-blur-lg"
+    v-show="route.name !== 'onboarding'"
+    class="fixed right-0 bottom-0 left-0 flex items-center justify-between border-t border-neutral-950/8 px-4 pt-1 pb-[4vh] backdrop-blur-lg"
   >
     <NuxtLink
       to="/"
@@ -40,7 +41,9 @@
   </nav>
 </template>
 
-<script setup></script>
+<script setup>
+const route = useRoute();
+</script>
 
 <style scoped>
 .router-link-active,

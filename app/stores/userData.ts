@@ -28,11 +28,11 @@ interface UserDetailsPayload {
 
 // Activity level multipliers for TDEE calculation
 const activityMultipliers: { [key: string]: number } = {
-  "Little or no exercise": 1.2,
-  "Light: 1–3 workouts per week": 1.375,
-  "Moderate: 3–5 workouts per week": 1.55,
-  "Active: 6–7 workouts per week": 1.725,
-  "Very Active: Daily intense exercise or physical job": 1.9,
+  sedentary: 1.2,
+  lightly_active: 1.375,
+  moderately_active: 1.55,
+  very_active: 1.725,
+  extra_active: 1.9,
 };
 
 /**

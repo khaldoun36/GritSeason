@@ -5,6 +5,7 @@
     class="space-y-6 overflow-y-auto px-4 py-10"
     @submit="onSubmit"
   >
+    <h1 class="text-3xl font-semibold text-neutral-800">Your Details</h1>
     <UFormField label="Current weight" name="currentWeight" size="xl">
       <UInput v-model="state.currentWeight" type="number" class="w-full">
         <template #trailing>
