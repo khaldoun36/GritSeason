@@ -1,6 +1,6 @@
 <template>
   <header class="dates-header sticky top-[41px] left-0 space-y-3 pb-5.5">
-    <h1 class="text-3xl font-semibold text-neutral-800">
+    <h1 class="text-3xl font-semibold text-zinc-200">
       {{ format(selectedDate, "EEE") }}
     </h1>
 
@@ -11,8 +11,7 @@
         :class="
           twMerge(
             'flex aspect-[3/4] flex-col items-center justify-center gap-0.5 rounded-lg text-center outline-[1.75px] outline-neutral-950/10',
-            isSameDay(selectedDate, day) &&
-              'bg-gradient-to-bl from-neutral-950 to-neutral-800 outline-black',
+            isSameDay(selectedDate, day) && 'bg-white/8 outline-white/10',
           )
         "
         @click="handleDateChange(day)"
@@ -20,7 +19,7 @@
         <span
           :class="
             twMerge(
-              'text-base font-medium text-neutral-800',
+              'text-base font-medium text-zinc-200',
               isSameDay(selectedDate, day) && 'text-white',
             )
           "
@@ -30,7 +29,7 @@
         <span
           :class="
             twMerge(
-              'text-sm font-medium text-neutral-500',
+              'text-sm font-medium text-zinc-400',
               isSameDay(selectedDate, day) && 'text-neutral-300',
             )
           "
@@ -82,6 +81,6 @@ const handleDateChange = (day) => {
 @reference "@/assets/css/main.css";
 
 .dates-header::after {
-  @apply absolute -top-10 -right-4 bottom-0 -left-4 -z-1 h-[calc(100%+40px)] border-b border-neutral-950/8 bg-white/70 shadow-2xs backdrop-blur-lg content-[""];
+  @apply absolute -top-10 -right-4 bottom-0 -left-4 -z-1 h-[calc(100%+40px)] border-b border-neutral-950/8 shadow-2xs backdrop-blur-lg content-[""];
 }
 </style>

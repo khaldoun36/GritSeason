@@ -1,17 +1,17 @@
 <template>
   <article
-    class="rounded-lg bg-white p-4 shadow-2xs outline outline-neutral-950/8"
+    class="rounded-lg bg-zinc-800 p-4 text-red-500/20 shadow-2xs outline outline-white/8"
   >
-    <h3 class="text-base font-medium text-neutral-500">Macros</h3>
+    <h3 class="text-base font-medium text-zinc-400">Macros</h3>
     <VueApexCharts
       type="radialBar"
       :options="chartOptions"
       :series="consumedMacrosPercentae"
     />
 
-    <div class="divide-y divide-neutral-950/8">
+    <div class="divide-y divide-white/8">
       <p class="flex items-baseline-last justify-between gap-8 pb-2">
-        <span class="label-sm text-neutral-500">Carbohydrates</span>
+        <span class="text-xs font-medium text-zinc-400">Carbohydrates</span>
         <span
           :class="
             twMerge(
@@ -25,7 +25,7 @@
         </span>
       </p>
       <p class="flex items-baseline-last justify-between gap-8 py-2">
-        <span class="label-sm text-neutral-500">Protein</span>
+        <span class="text-xs font-medium text-zinc-400">Protein</span>
         <span
           :class="
             twMerge(
@@ -39,7 +39,7 @@
         </span>
       </p>
       <p class="flex items-baseline-last justify-between gap-8 pt-2">
-        <span class="label-sm text-neutral-500">Fat</span>
+        <span class="text-xs font-medium text-zinc-400">Fat</span>
         <span
           :class="
             twMerge(
@@ -82,9 +82,9 @@ const chartOptions = computed(() => ({
       hollow: { size: "25%" },
       track: {
         background: [
-          "var(--color-lime-50)",
-          "var(--color-amber-50)",
-          "var(--color-sky-50)",
+          "oklab(0.41 -0.07 0.08 / 0.4)",
+          "oklab(0.41 0.08 0.08 / 0.4)",
+          "oklab(0.39 -0.04 -0.08 / 0.4)",
         ], // Dynamic track colors
         strokeWidth: "100%",
         margin: 5,

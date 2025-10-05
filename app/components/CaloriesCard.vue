@@ -1,23 +1,23 @@
 <template>
   <article
-    class="space-y-4 rounded-lg bg-white p-4 shadow-2xs outline outline-neutral-950/8"
+    class="space-y-4 rounded-lg bg-zinc-800 p-4 shadow-2xs outline outline-white/8"
   >
-    <h3 class="text-base font-medium text-neutral-500">Calories</h3>
+    <h3 class="text-base font-medium text-zinc-400">Calories</h3>
     <div class="grid grid-cols-1 grid-rows-1">
-      <div
-        class="col-start-1 row-start-1 h-12 w-full rounded-lg bg-neutral-950/8"
-      />
+      <div class="col-start-1 row-start-1 h-12 w-full rounded-lg bg-zinc-700" />
 
       <div
         :class="
           twMerge(
-            'col-start-1 row-start-1 flex h-12 items-center justify-end rounded-lg bg-gradient-to-bl from-neutral-950 to-neutral-800 pr-4',
+            'col-start-1 row-start-1 flex h-12 items-center justify-end rounded-lg bg-zinc-500 pr-4',
             consumedPercentage > 100 && 'bg-red-500',
           )
         "
         :style="{ width: `${consumedPercentage}%` }"
       >
-        <span v-show="consumedPercentage >= 15" class="label-lg text-white"
+        <span
+          v-show="consumedPercentage >= 15"
+          class="text-base font-medium text-zinc-200"
           >{{ foodDiary.totalCalories }}
         </span>
       </div>
@@ -25,7 +25,7 @@
       <p
         :class="
           twMerge(
-            'label-lg col-start-1 row-start-1 pt-3 pr-4 text-end text-neutral-800',
+            'col-start-1 row-start-1 pt-3 pr-4 text-end text-base font-medium text-zinc-200',
             consumedPercentage > 85 && 'text-transparent',
           )
         "
