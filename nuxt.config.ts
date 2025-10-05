@@ -31,6 +31,7 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "@nuxt/eslint",
     "@nuxt/icon",
+    "@nuxt/fonts",
   ],
 
   pwa: {
