@@ -4,3 +4,9 @@
 @utility page-padding {
   @apply px-4 py-10;
 }
+
+html,
+body,
+#_app {
+  background: var(--color-neutral-50);
+}

@@ -5,6 +5,10 @@
       <div class="h-px w-full bg-transparent" />
       <NuxtPage />
       <div class="h-px w-full bg-transparent" />
+      <TapBar />
     </div>
   </UApp>
 </template>
+<script setup>
+import TapBar from "./components/TapBar.vue";
+</script>

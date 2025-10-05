@@ -1,5 +1,5 @@
 <template>
-  <div class="page-padding bg-green-100">
+  <div class="page-padding">
     <h1>Hello home</h1>
   </div>
 </template>
