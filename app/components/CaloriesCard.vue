@@ -9,7 +9,7 @@
       <div
         :class="
           twMerge(
-            'col-start-1 row-start-1 flex h-12 items-center justify-end rounded-lg bg-zinc-500 pr-4',
+            'col-start-1 row-start-1 flex h-12 items-center justify-end rounded-lg bg-zinc-300 pr-4',
             consumedPercentage > 100 && 'bg-red-500',
           )
         "
@@ -17,7 +17,7 @@
       >
         <span
           v-show="consumedPercentage >= 15"
-          class="text-base font-medium text-zinc-200"
+          class="text-base font-medium text-zinc-800"
           >{{ foodDiary.totalCalories }}
         </span>
       </div>

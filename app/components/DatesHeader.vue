@@ -81,6 +81,6 @@ const handleDateChange = (day) => {
 @reference "@/assets/css/main.css";
 
 .dates-header::after {
-  @apply absolute -top-10 -right-4 bottom-0 -left-4 -z-1 h-[calc(100%+40px)] border-b border-neutral-950/8 shadow-2xs backdrop-blur-lg content-[""];
+  @apply absolute -top-10 -right-4 bottom-0 -left-4 -z-1 h-[calc(100%+40px)] border-b border-white/8 shadow-2xs backdrop-blur-lg content-[""];
 }
 </style>

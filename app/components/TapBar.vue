@@ -11,7 +11,7 @@
       <span class="sr-only">Home</span>
     </NuxtLink>
     <NuxtLink
-      to="/"
+      to="/food-diary"
       class="grid size-12 place-items-center-safe rounded-lg text-zinc-400 transition-transform active:scale-97"
     >
       <Icon name="ph:cookie" size="24px" />
