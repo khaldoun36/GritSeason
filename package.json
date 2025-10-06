@@ -20,6 +20,7 @@
     "@tailwindcss/vite": "^4.1.14",
     "@vee-validate/zod": "^4.15.1",
     "@vite-pwa/nuxt": "1.0.4",
+    "@vueuse/nuxt": "13.9.0",
     "ai": "^5.0.60",
     "date-fns": "^4.1.0",
     "eslint": "^9.37.0",

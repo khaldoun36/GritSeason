@@ -43,6 +43,7 @@ export default defineNuxtConfig({
     "@nuxt/eslint",
     "@nuxt/icon",
     "@nuxt/fonts",
+    "@vueuse/nuxt",
   ],
 
   pwa: {
