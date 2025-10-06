@@ -31,8 +31,11 @@ import { createOpenAI } from "@ai-sdk/openai";
 import { useUiStore } from "@/stores/ui";
 
 // 1. Configure your AI provider
+
+const config = useRuntimeConfig();
+
 const openai = createOpenAI({
-  apiKey: import.meta.env.VITE_OPENAI_API_KEY,
+  apiKey: config.openaiApiKey,
 });
 
 // 2. Define the Zod schema to match your original prompt
