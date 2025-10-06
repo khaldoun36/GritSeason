@@ -12,6 +12,7 @@
           placeholder="e.g., 2 eggs and a slice of toast with butter"
           variant="subtle"
           @submit="handleSubmit"
+          class="h-20"
         >
           <UButton
             icon="i-heroicons-paper-airplane-20-solid"
