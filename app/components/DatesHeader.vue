@@ -1,5 +1,5 @@
 <template>
-  <header class="dates-header sticky top-[41px] left-0 space-y-3 pb-5.5">
+  <header class="dates-header sticky top-[41px] left-0 z-100 space-y-3 pb-5.5">
     <h1 class="text-3xl font-semibold text-zinc-200">
       {{ format(selectedDate, "EEE") }}
     </h1>

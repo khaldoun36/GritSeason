@@ -1,7 +1,7 @@
 <template>
   <nav
     v-show="route.name !== 'onboarding'"
-    class="fixed right-0 bottom-0 left-0 flex items-center justify-between border-t border-white/8 px-4 pt-1.5 pb-[4vh] backdrop-blur-lg"
+    class="fixed right-0 bottom-0 left-0 z-100 flex items-center justify-between border-t border-white/8 px-4 pt-1.5 pb-[4vh] backdrop-blur-lg"
   >
     <NuxtLink
       to="/"
