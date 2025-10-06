@@ -6,11 +6,19 @@ export default defineNuxtConfig({
 
   ssr: false,
 
+  runtimeConfig: {
+    openaiApiKey: "",
+  },
+
   build: {
     transpile: ["tslib"],
   },
 
   app: {
+    rootAttrs: {
+      "data-vaul-drawer-wrapper": "",
+      class: "bg-default",
+    },
     head: {
       meta: [
         // Add this line

@@ -17,13 +17,13 @@
       <Icon name="ph:cookie" size="24px" />
       <span class="sr-only">Food diary</span>
     </NuxtLink>
-    <NuxtLink
-      to="/"
+    <button
+      @click="uiStore.toggleDrawer()"
       class="grid size-12 place-items-center-safe rounded-lg bg-white/8 text-zinc-200 transition-transform active:scale-97"
     >
       <Icon name="ph:plus" size="24px" />
       <span class="sr-only">Add new food</span>
-    </NuxtLink>
+    </button>
     <NuxtLink
       to="/"
       class="grid size-12 place-items-center-safe rounded-lg text-zinc-400 transition-transform active:scale-97"
@@ -42,7 +42,13 @@
 </template>
 
 <script setup>
+import { useUiStore } from "@/stores/ui";
 const route = useRoute();
+
+const uiStore = useUiStore();
+
+// Access state: uiStore.isOpen
+// Call action: uiStore.toggleDrawer()
 </script>
 
 <style scoped>
