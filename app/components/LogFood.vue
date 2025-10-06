@@ -1,7 +1,7 @@
 <template>
   <UDrawer
     v-model:open="uiStore.isOpen"
-    class="min-h-[50vh] px-4 pb-4"
+    class="min-h-[80vh] px-4 pb-4"
     title="Log Your Meal"
     description="Add the food you’ve just eaten to keep track of your meals."
   >
@@ -12,7 +12,16 @@
           placeholder="e.g., 2 eggs and a slice of toast with butter"
           variant="subtle"
           @submit="handleSubmit"
-        />
+        >
+          <UButton
+            icon="i-heroicons-paper-airplane-20-solid"
+            color="primary"
+            variant="solid"
+            size="xl"
+            :disabled="!input || isLoading"
+            @click="handleSubmit"
+          />
+        </UChatPrompt>
         <div v-if="isLoading" class="flex items-center justify-center pt-4">
           <p class="text-gray-500">Generating...</p>
         </div>
