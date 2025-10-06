@@ -5,11 +5,14 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
 
   ssr: false,
-
   runtimeConfig: {
-    // Private keys are only available on the server
-    openaiApiKey: process.env.NUXT_OPENAI_API_KEY,
+    // This key is only available on the server
+    openaiApiKey: process.env.OPENAI_API_KEY,
+
+    // Public keys are exposed to the client
+    public: {},
   },
+
   build: {
     transpile: ["tslib"],
   },
