@@ -93,17 +93,21 @@ export const useFoodDiaryStore = defineStore("foodDiary", {
      * Adds a food entry to the state and saves it to the database.
      */
     async addFood(food: Omit<FoodEntry, "id" | "timestamp">) {
+      // 👇 Create a guaranteed plain object by deep cloning the input.
       const newEntry: FoodEntry = {
-        ...food,
+        ...JSON.parse(JSON.stringify(food)),
         id: `${Date.now()}-${Math.random().toString(36).substring(2)}`,
         timestamp: Date.now(),
       };
-      this.foodLog.push(newEntry);
 
+      // It's generally safer to save to the DB *first*, then update the state.
       try {
-        await saveFoodEntryToDB(newEntry); // 👈 Save to DB
+        await saveFoodEntryToDB(newEntry);
+        // On success, push the (now plain) entry to the state.
+        this.foodLog.push(newEntry);
       } catch (error) {
         console.error("Failed to save food entry:", error);
+        // Handle the error, maybe show a notification to the user.
       }
     },
 

@@ -105,6 +105,8 @@ const logFood = () => {
   // 1. Add the food to your Pinia store
   foodDiaryStore.addFood(responseJson.value);
 
+  console.log(responseJson.value);
+
   // 2. Reset the input field
   input.value = "";
 
